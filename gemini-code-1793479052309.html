@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Perfect Lab | A2-B1 English</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo"><span>P</span> Present Perfect <span>Lab</span></div>
+        <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        <nav id="main-nav">
+            <a href="#grammar" onclick="toggleMobileMenu()">Grammar</a>
+            <a href="#matching" onclick="toggleMobileMenu()">Matching</a>
+            <a href="#reading" onclick="toggleMobileMenu()">Reading</a>
+            <a href="#ordering" onclick="toggleMobileMenu()">Ordering</a>
+            <a href="#time-exp" onclick="toggleMobileMenu()">Time Exp.</a>
+            <a href="#dashboard" class="btn-nav" onclick="toggleMobileMenu()">My Progress</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <span class="badge">A2 - B1 ENGLISH</span>
+                <h1>Connect the past <br><span>to the present.</span></h1>
+                <p>Learn the Present Perfect Simple, practise with interactive activities, and track your progress automatically.</p>
+                <p class="es-hint">Aprende, practica y descubre en qué debes mejorar.</p>
+                <div class="hero-buttons">
+                    <a href="#grammar" class="btn btn-primary">Start Learning</a>
+                </div>
+            </div>
+            <div class="timeline-graphic">
+                <div class="point past">
+                    <strong>PAST</strong>
+                    <span>Action started</span>
+                </div>
+                <div class="line">
+                    <span class="formula">have / has + past participle</span>
+                </div>
+                <div class="point present">
+                    <strong>NOW</strong>
+                    <span>Result / Still true</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="grammar" class="content-section">
+            <div class="section-header">
+                <span class="section-num">01 / LEARN</span>
+                <h2>Grammar Essentials</h2>
+                <p class="es-hint">Lee las reglas principales. Usa las notas en español si lo necesitas.</p>
+            </div>
+            
+            <div class="grammar-grid">
+                <div class="card" id="grammar-have-has">
+                    <h3>1. Structure (Estructura)</h3>
+                    <p><strong>Affirmative:</strong> Subject + have/has + past participle</p>
+                    <p class="example">I <b>have tried</b> sushi.</p>
+                    <p><strong>Negative:</strong> Subject + haven't/hasn't + past participle</p>
+                    <p class="example">She <b>hasn't called</b> me.</p>
+                    <p><strong>Question:</strong> Have/Has + subject + past participle?</p>
+                    <p class="example"><b>Have</b> you <b>finished</b>?</p>
+                    <div class="alert-box">
+                        <strong>Remember:</strong> Use <i>has</i> with he/she/it.
+                        <span class="es-hint block">Recuerda: usa 'has' (o hasn't) solo para la tercera persona singular.</span>
+                    </div>
+                </div>
+
+                <div class="card" id="grammar-participles">
+                    <h3>2. Past Participles</h3>
+                    <p>Regular verbs end in <b>-ed</b>. Irregular verbs change completely.</p>
+                    <ul class="verb-list">
+                        <li>Work → <b>worked</b> (Regular)</li>
+                        <li>Study → <b>studied</b> (Regular)</li>
+                        <li>See → <b>seen</b> (Irregular)</li>
+                        <li>Go → <b>gone</b> (Irregular)</li>
+                    </ul>
+                    <span class="es-hint block">Debes memorizar la tercera columna de los verbos irregulares.</span>
+                </div>
+
+                <div class="card full-width" id="grammar-time-exp">
+                    <h3>3. Time Expressions (Expresiones de tiempo)</h3>
+                    <div class="tags-grid">
+                        <div class="tag-card"><strong>Since:</strong> Starting point <i>(since 2020)</i> <br><span class="es-hint">Desde un punto específico.</span></div>
+                        <div class="tag-card"><strong>For:</strong> Duration <i>(for 3 years)</i> <br><span class="es-hint">Por un periodo de tiempo.</span></div>
+                        <div class="tag-card"><strong>Ever:</strong> Any time <i>(Have you ever...?)</i> <br><span class="es-hint">¿Alguna vez...? (En preguntas)</span></div>
+                        <div class="tag-card"><strong>Never:</strong> No time <i>(I have never...)</i> <br><span class="es-hint">Nunca. (Hace la oración negativa)</span></div>
+                        <div class="tag-card"><strong>Already:</strong> Sooner than expected <i>(I've already eaten)</i> <br><span class="es-hint">Ya. (Acciones terminadas)</span></div>
+                        <div class="tag-card"><strong>Yet:</strong> Until now <i>(Not yet / finished yet?)</i> <br><span class="es-hint">Todavía no / Ya (En negativas y preguntas).</span></div>
+                    </div>
+                </div>
+
+                <div class="card full-width" id="grammar-vs-past-simple">
+                    <h3>4. Present Perfect vs. Past Simple</h3>
+                    <p>Use the <strong>Present Perfect</strong> for actions connected to the present or when the time is not specific. Use the <strong>Past Simple</strong> for finished actions in a specific time in the past.</p>
+                    <p class="example">Present Perfect: I <b>have been</b> to Paris. <i>(Sometime in my life)</i></p>
+                    <p class="example">Past Simple: I <b>went</b> to Paris <b>in 2019</b>. <i>(Finished time)</i></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="matching" class="content-section">
+            <div class="section-header">
+                <span class="section-num">02 / PRACTISE</span>
+                <h2>Matching Activity</h2>
+                <p>Choose the correct option to complete the sentences.</p>
+            </div>
+            <div id="matching-container" class="activity-container"></div>
+            <button id="btn-check-matching" class="btn btn-primary" onclick="checkMatching()">Check Matching Answers</button>
+        </section>
+
+        <section id="reading" class="content-section">
+            <div class="section-header">
+                <span class="section-num">03 / READ</span>
+                <h2>A New Hobby</h2>
+                <p>Read the text and answer the questions.</p>
+            </div>
+            <div class="reading-box">
+                <p>My brother, Leo, has always loved music, but he <b>has never played</b> an instrument. Last year, he decided to buy a guitar. He <b>has had</b> it <b>since</b> December, and he practises every day.</p>
+                <p>He <b>hasn't taken</b> any formal lessons <b>yet</b>. Instead, he <b>has watched</b> many tutorials online. Yesterday, he played a full song for the first time. I was surprised! He <b>has already learned</b> five different chords. He says he wants to start a band, but he hasn't found a drummer yet.</p>
+            </div>
+            <div id="reading-container" class="activity-container"></div>
+            <button id="btn-check-reading" class="btn btn-primary" onclick="checkReading()">Check Reading Answers</button>
+        </section>
+
+        <section id="ordering" class="content-section">
+            <div class="section-header">
+                <span class="section-num">04 / INTERACT</span>
+                <h2>Sentence Ordering</h2>
+                <p>Tap the words in the correct order to build Present Perfect sentences.</p>
+                <p class="es-hint">Toca las palabras para formar la oración. Si te equivocas, toca la palabra en la línea de respuesta para devolverla.</p>
+            </div>
+            <div id="ordering-container" class="activity-container"></div>
+            <button id="btn-check-ordering" class="btn btn-primary" onclick="checkOrdering()">Check Sentences</button>
+        </section>
+
+        <section id="time-exp" class="content-section">
+            <div class="section-header">
+                <span class="section-num">05 / MASTER</span>
+                <h2>Time Expressions</h2>
+                <p>Select the correct time expression for each context.</p>
+            </div>
+            <div id="timeexp-container" class="activity-container"></div>
+            <button id="btn-check-timeexp" class="btn btn-primary" onclick="checkTimeExp()">Check Time Expressions</button>
+
+            <!-- GUIDED WRITING SECTION -->
+            <div class="guided-writing">
+                <h3>Guided Writing Task</h3>
+                <p>Write at least two sentences about your own life using <strong>since, for, already, yet, ever,</strong> or <strong>never</strong>.</p>
+                <textarea id="guided-text" rows="4" placeholder="Example: I have lived in Neiva since 2010. I haven't traveled to Europe yet."></textarea>
+                <div class="checklist">
+                    <h4>Self-Check:</h4>
+                    <label><input type="checkbox" id="check-time"> I used time expressions correctly in my sentences.</label>
+                    <label><input type="checkbox" id="check-form"> I used have/has + past participle.</label>
+                    <label><input type="checkbox" id="check-sense"> My sentences describe real experiences in my life.</label>
+                </div>
+                <p class="es-hint">Esta sección es para tu práctica personal. Tu profesor podrá revisarla luego, no es evaluada por el sistema automático.</p>
+            </div>
+        </section>
+
+        <section id="dashboard" class="content-section dashboard-section">
+            <div class="section-header">
+                <span class="section-num">MY PROGRESS</span>
+                <h2>Learning Dashboard</h2>
+                <p>Track your strengths and identify what you need to review.</p>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="dash-card stats-card">
+                    <h3>Progress & Accuracy</h3>
+                    <div class="progress-bar-bg" aria-hidden="true"><div id="completion-progress" class="progress-bar-fill"></div></div>
+                    <p id="progress-text"><strong>Questions evaluated:</strong> 0 / 0</p>
+                    <p id="correct-text"><strong>Correct answers:</strong> 0 / 0</p>
+                    <p id="accuracy-text"><strong>Accuracy:</strong> 0%</p>
+                    <hr>
+                    <h4>Section Completion:</h4>
+                    <ul id="section-scores-list"></ul>
+                </div>
+
+                <div class="dash-card reco-card">
+                    <h3>Personalized Recommendations</h3>
+                    <p class="es-hint">Basado en tu progreso y tus errores, el sistema te guía sobre qué hacer a continuación.</p>
+                    <div id="recommendations-container"></div>
+                </div>
+
+                <div class="dash-card tags-card">
+                    <h3>Grammar Competencies</h3>
+                    <p class="es-hint">Se requieren al menos 2 respuestas evaluadas en una categoría para medir su nivel.</p>
+                    <div id="tags-container"></div>
+                </div>
+            </div>
+            
+            <button class="btn btn-danger" onclick="resetProgress()">Reset All Progress</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
